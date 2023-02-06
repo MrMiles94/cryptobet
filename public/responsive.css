@@ -1,0 +1,331 @@
+
+@media screen and (max-width:1250px){
+    .wallet-collection,.wallet-container>p{
+        width: 65% !important
+    }
+    .home-wallet{
+        width: 80%
+    }
+    .wallet-holder{
+        width: 100%
+    }
+}
+@media screen and (max-width: 1050px){
+
+    nav{
+        height: 60px !important
+    }
+    .disappear-m{
+        display: none;
+    }
+    .appear-m{
+        display: inherit !important
+    }
+    .quick-nav-actions{
+        width: 35%;
+    }
+    .mobile-tab{
+        width: auto;
+        height:auto;
+    }
+    .absolute{
+        position: absolute;
+    }
+    /*
+    #hide-left{
+        transform-origin: right;
+        transform: rotateY(90deg);
+    }*/
+    .absolute.menu-tabs,.menu-tabs>a{
+        display: block;
+    }
+    div#nav .mobile-tab>.menu-tabs>a.router-link-exact-active {
+        color: var(--text-white);
+        border-bottom: 2px solid white;
+    }
+    .absolute.menu-tabs{
+        position: absolute;
+        width: 40%;
+        background-color:var(--deemed-black);
+        height: 300px;
+        top:79px;
+        right: 0%;
+        backdrop-filter: blur(7px)
+    }
+    
+    .menu-tabs>a{
+        padding: 4% 7%;
+        margin-top: 2%;
+        font-size: medium;
+    }
+    .absolute.menu-tabs>a:hover{
+        background-color: var(--blue-gray)
+    }
+    .menu-tabs>a:hover{
+        text-indent: 4%;
+        color: whitesmoke
+    }
+    #tab-toggler{
+        width: 50px;
+        height: 50px;
+        background-color: var(--blackish-blue);
+        cursor: pointer        
+    }
+    hr.nav-btn{
+        border: 0px;
+        border-bottom: 3px solid var(--text-white) 
+    }
+    hr.x_{
+        transform: rotateZ(45deg) translateY(5px) translateX(4px) 
+    }
+    hr._x{
+        transform: rotateZ(-45deg) translateY(-3px) translateX(1px)
+    }
+    .explore-n-learn{
+        width:50%
+    }
+    
+}
+@media screen and (max-width: 980px){
+.home-wallet{
+    width:78%
+}
+.home-wallet .wallet img{
+    width: 30px
+}
+.home-wallet .wallet span{
+    margin-left: 6%
+}
+    
+}
+@media screen and (max-width:900px){
+    .wallet-collection,.wallet-container>p{
+        width: 75% !important
+    }
+    .explore-n-learn{
+        width:55%
+    }
+   a,p{
+        font-size: medium !important        
+    }
+    .home-wallet{
+        width:88%
+    }
+    .home-wallet .wallet span{
+        font-size: small;
+        text-overflow: clip;
+    }
+    .card{
+        width: 41% !important;
+        margin: 1.5%;
+    }
+}
+@media screen and (max-width: 820px){
+    .no-bet{
+        width: 90%
+    }
+    .no-bet-image-box{
+        width: 200px;
+        height: 200px;
+    }
+
+    .quick-nav-actions{
+        width: 40%
+    }
+    /* for wallets*/
+    .wallet-collection,.wallet-container>p{
+        width: 85% !important
+    }
+}
+@media screen and (max-width:700px){
+    /*Navigation styling for small screens*/
+    #nav{
+        height:50px !important;
+        padding-top: 1% !important
+    }
+    .container{
+        width: 90%;
+        padding: 2% 5%;
+    }
+    .head-pad{
+        height:50px
+    }
+    .absolute.menu-tabs{
+        top:57px
+    }
+    .quick-nav-actions{
+        width: 50%
+    }
+    .off-700{
+        display: none !important;
+    }
+    .ON-700{
+        display:inherit
+    }
+    .just-space-between-700{
+        justify-content: space-between !important
+    }
+    .just-space-evenly-700{
+        justify-content: space-evenly!important
+    }
+    .just-right-700{
+        justify-content: right !important
+    }
+    .flex-col-700{
+        flex-direction: column
+    }
+    .flex-row-700{
+        flex-direction: row
+    }
+    p,a,.quick-nav-actions>a{
+        font-size: small
+    }
+    #tab-toggler{
+        padding: 0px;
+        width: 30px !important;
+        height: 40px !important;
+    }
+    .menu-tabs{
+        width: 60% !important;
+    }
+    .menu-tabs>a{
+        text-indent: 20px
+    }
+    .menu-tabs>a:hover{
+        text-indent: 25px !important
+    }
+    .notify{
+        width: auto;
+        height: auto !important;
+        padding-left: 7%;
+    }
+    .notify>a,.notify>span{
+        margin: 5%
+    }
+    /* for wallet component*/
+    .wallet-holder{
+        flex-direction: column
+    }
+    .wallet{
+        width: 95% !important
+    }
+    /*For Home view*/
+    .explore-n-learn a{
+        margin-top: 3%
+    }
+
+     /* Wallet styling*/
+    h1,.wallet-container>h1{
+        font-size: larger !important    
+    }
+    button,.wallet-collection>button{
+        padding:3% 0px;
+        font-size: medium
+    }
+
+    /*card presentations*/
+    .card{
+        width:90% !important;
+        padding: 5%;
+        margin: 0px !important;
+        margin-bottom: 4% !important;
+    }
+
+    /* Search component styling */
+
+    .search-area>.search-bar{
+        width:79%;
+    }
+    select#Liquidity{
+        width:85px;
+    }
+   
+}
+@media screen and (max-width:620px){
+    .explore-n-learn{
+        width: 70%
+    }
+}
+@media screen and (max-width:540px){
+    /* Navigation styling for small screens*/
+    #tab-toggler{
+        width:25px;
+        height:40px;
+        border-width:2px;
+    }
+    .menu-tabs{
+        top:54px !important
+    }
+    /*home styling*/
+
+    /* Wallet styling*/
+    .wallet>span{
+        font-size: small !important;
+    }
+    .wallet-collection>button{
+        font-size:small
+    }
+    p,.wallet-collection>p,.wallet-container p{
+        font-size: small
+    }
+    .container{
+        width: 94%;
+        padding: 2% 3%;
+    }
+    .card{
+        width:95% !important;
+    }
+    .market-tags{
+        padding-left:3%
+    }
+    .market-tags{
+        margin: 2% 0%;
+        width:95%;
+    }
+
+    .search-area>.search-bar{
+        width:76%;
+    }
+}
+@media screen and (max-width:470px){
+    .search-area>.search-bar{
+        width: 73%;
+        height: 25px;
+        font-size: smaller
+    }
+}
+@media screen and (max-width:400px){
+    .search-area>.search-bar{
+        width: 68%;
+        height: 25px;
+        font-size: smaller
+    }
+    .container{
+        width: 96%;
+        padding: 2% 1.5%;
+    }
+}
+
+@media screen and (max-width:340px){
+    .container{
+        width:98%;
+        padding:1%
+    }
+    .menu-tabs{
+        width:85% !important;
+        top:53px !important  
+    }
+    .card{
+        width:98% !important;
+    }
+
+    .search-area>.search-bar{
+        width: 65%;
+        height: 25px;
+        font-size: smaller
+    }
+    /* No bet box*/
+    .no-bet{
+        width: 85%
+    }
+}

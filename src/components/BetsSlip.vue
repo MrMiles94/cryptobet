@@ -21,7 +21,7 @@
                    </div>
                </div>
             </div>
-            <div class="bet-slip-summarry">
+            <div class="bet-slip-summarry prediction-summarry">
                 <button class="btn" @click="toggleSummarry">Summarry <i class="fa fa-caret-down"></i></button>
                 <PredictionSummarry/>
             </div>

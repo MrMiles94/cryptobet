@@ -1,6 +1,5 @@
 <template>
-<div class="prediction-market container flex-col align-center">
-    <ModalOverlay/>
+<div class="prediction-market container flex-col align-center"><router-view></router-view>
     <h1>Explore, and enter any active market of your choice.</h1>
     <hr>
     <div class="search-area flex-row just-space-between">
@@ -22,12 +21,10 @@
 </template>
 <script>
 import SinglePrediction from '../components/Prediction.vue'
-import ModalOverlay from '../components/ModalOverlay'
 import MarketFilters from '../components/MarketFilters.vue'
 export default{
     components:{
         SinglePrediction,
-        ModalOverlay,
         MarketFilters
     }
 }

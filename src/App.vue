@@ -1,6 +1,7 @@
 <template>
 <div>
   <CustomHeader/>
+  <div class="header-pad"></div>
   <router-view></router-view>
 </div>
 </template>

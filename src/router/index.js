@@ -1,11 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/HomeView.vue';
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    children:[
+      {
+        path: '/',
+        name: 'home',
+        component: import(/*webpackChunkName:"Home" */ '../views/MainHomeView.vue'),
+      },
+      {
+        path:'/how_to_play',
+        name:'how_to_play',
+        component:() => import(/*webpackChunkName: "HowToPlay"*/ '../views/HowToPlay.vue')
+      }
+    ]
   },
   {
     path: '/about',
@@ -21,7 +33,14 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/MyPredictions.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/MyPredictions.vue'),
+    children:[
+      {
+        path:'/confirm_slip',
+        name:'Confirm_slip',
+        component:()=>import(/*webpackChunkName:'confirmSlip' */ '../components/ModalOverlay.vue')
+      }
+    ]
   },
   {
     path: '/predictionmarket',
@@ -29,7 +48,14 @@ const routes = [
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/PredictionMarket.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/PredictionMarket.vue'),
+    children:[
+      {
+        path:'/slip',
+        name: 'betslip',
+        component: import(/*webpackChunckName: BetSlip */ '../components/ModalOverlay.vue')
+      }
+    ]
   },
   {
     path: '/wallet',

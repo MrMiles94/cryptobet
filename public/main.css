@@ -16,6 +16,7 @@
     --very-faint-yellow:rgb(85, 85, 43);
     --dark-overlay:rgba(5, 11, 20, 0.65);
     --blue-gray:#515179;
+    --faint-blue-gray:#515179a1;
 }
 *{
     transition-duration: 300ms
@@ -47,7 +48,7 @@ ul{
 li{
     margin-left: 0px;
 }
-p,h1,h2,h3,input,select,option,span,label,button,ul,li{
+p,h1,h2,h3,h4,input,select,option,span,label,button,ul,li{
     color:var(--text-white)
 }
 
@@ -88,6 +89,22 @@ p,h1,h2,h3,input,select,option,span,label,button,ul,li{
     background-color: #080F19;
     font-size: larger;
 }
+.circle{
+    border-radius: 50%;
+}
+.small-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%
+}
+/* colors*/
+.clear-fill{
+    background-color: #00000000 !important;
+}
+.deemed-black{
+    background-color: var(--deemed-black)
+}
+
 .faint-white-border{
     border: 1px solid var(--faint-white)
 }
@@ -105,7 +122,7 @@ div#nav{
     width: 92% !important;
     padding: 0% 4%;
 }
-div#nav>.menu-tabs>a.router-link-exact-active,div#nav .mobile-tab>.menu-tabs>a.router-link-exact-active {
+div#nav>.menu-tabs>a.router-link-exact-active,div#nav .mobile-tab>.menu-tabs>a.router-link-exact-active,.art-n-video>a.router-link-exact-active {
     color: var(--text-white);
     border-bottom: 2px solid white;
 }
@@ -117,7 +134,14 @@ div#nav a.router-link-exact-active {
   }
   div#nav a:hover{
       color: var(--text-white)
-  }
+}
+.fix{
+    position: fixed;
+    z-index: 10000;
+}
+.header-pad{
+    height:80px;
+}
 .logo{
     width: 90px;
     height: 80%;
@@ -126,9 +150,14 @@ div#nav a.router-link-exact-active {
     border-bottom: 0px solid #00000000 !important;
 }
 .container{
-    width: 98%;
+    width: 96%;
     height: auto;
-    padding: 2% 1%;
+    padding: 2% 2%;
+}
+.container-fluid{
+    width: 100%;
+    padding: .5%;
+    margin-top: 2%;
 }
 /*menu tab stylings*/
 .menu-tabs{
@@ -217,6 +246,9 @@ backdrop-filter: blur(3px);
 }
 .btn-empty-fill:hover{
     background-color:  var(--deep-blue);
+}
+.faint-background{
+    background-color: var(--faint-blue-gray)
 }
 .link{
     padding: 2%
@@ -466,3 +498,126 @@ option{
 .no-bet>a{
     border-radius: 5px;
 }
+/* Modal overlay styling*/
+.modal-overlay{
+    position: absolute;
+    width: 100%;
+    min-height:100%;
+    background-color: #050B1490;
+    backdrop-filter: blur(8px);
+    top: 90px
+}
+input{
+    background-color: #050B1450
+}
+.market-data{
+    margin-top: 4%;
+    font-style: Syne;
+    width: 35%;
+    padding: 0% 2% 2% 2%;
+    background-color: #131320;
+    border-radius: 7px;
+}
+.market-data>h2{
+    font-size: larger;
+    font-weight: bolder;
+    color:var(--faint-yellow);
+    text-align: center;
+    padding-top: 2% !important;
+}
+.market-data>div>p{
+    font-size: small;
+    margin: 1% 0%;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-faint-white)
+}
+.market-data>div>p>span{
+    color: var(--faint-yellow)
+}
+.market-data>div{
+    margin: 2% 0%;
+}
+.market-data>div>label{
+    font-size: large
+}
+.market-data>div>label>span{
+    font-size: medium;
+}
+.input-holder{
+    width: 96%;
+    padding: 2%;
+    background-color: #050B1450;
+    margin: 2% 0%;
+}
+.input-holder>input{
+width: 70%;
+font-size: medium
+}
+.input-holder>button{
+    background-color: #050B1450;
+    color: var(--deep-blue)
+}
+/* Prediction Summarry*/
+.prediction-summarry{
+    width:50%;
+    padding: 2%;
+    border-radius: 8px
+}
+.prediction-summarry>ul>li{
+    display: flex;
+    justify-content: space-between;
+    margin: 5%;
+    font-size: medium
+}
+.prediction-summarry>ul>li>span.reward{
+    color: var(--faint-yellow)
+}
+.market-data>.btn{
+    margin: 1.5% 0%;
+}
+.prediction-summarry>button{
+    background-color: #050B1450;
+    font-size: large
+}
+.btn-container>h4{
+    margin-left: 1%;
+}
+.play-guides{
+    text-align: center
+}
+.play-guides>hr{
+    margin: 3% 0%;
+    width: 90%;
+    border: 0px solid var(--faint-white);
+    border-bottom-width: 1px !important;
+}
+.art-n-video{
+    width: 100%;
+}
+.art-n-video>a{
+    margin: 2% !important;
+    border-bottom: 1px solid white;
+    padding: 1% 0% !important
+}
+.how-to-videos{
+    padding: 2% !important;
+    border-radius: 9px
+}
+.how-to-videos .text{
+    text-align: left
+}
+.how-to-videos>.video{
+    background-color: var(--faint-blue-gray);
+    height: 200px;
+    border-radius: 8px
+}
+.play-btn{
+    width: 60px;
+    padding: 0px;
+    height: 50px;
+    border-radius: 30%;
+}
+
+

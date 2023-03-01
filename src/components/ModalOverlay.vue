@@ -1,5 +1,5 @@
 <template>
-    <div v-if="showMarketDetails" class="modal-overlay flex-col align-center">
+    <div class="modal-overlay flex-col align-center">
         <div class="market-data flex-col just-space-around">
             <h2>Enter the required details and stake</h2>
             <div>
@@ -50,8 +50,7 @@ export default{
     name:'ModalOverlay',
     data(){
         return{
-            showSummarry:true,
-            showMarketDetails:false
+            showSummarry:true
         }
     },methods: {
         toggleSummarry(){
@@ -63,80 +62,3 @@ export default{
     }
 }
 </script>
-<style>
-.modal-overlay{
-    position: absolute;
-    width: 100%;
-    height:100%;
-    background-color: #050B1490;
-    backdrop-filter: blur(8px);
-    top: 90px
-}
-input{
-    background-color: #050B1450
-}
-.market-data{
-    margin-top: 4%;
-    font-style: Syne;
-    width: 35%;
-    padding: 0% 2% 2% 2%;
-background-color: #131320;
-border-radius: 7px;
-}
-.market-data>div>p{
-    font-size: small;
-    margin: 1% 0%;
-    width:100%;
-    display: flex;
-    justify-content: space-between;
-    color: var(--text-faint-white)
-}
-.market-data>div>p>span{
-    color: var(--faint-yellow)
-}
-.market-data>div{
-    margin: 2% 0%;
-}
-.market-data>div>label{
-    font-size: large
-}
-.market-data>div>label>span{
-    font-size: medium;
-}
-.input-holder{
-    width: 96%;
-    padding: 2%;
-    background-color: #050B1450;
-    margin: 2% 0%;
-}
-.input-holder>input{
-width: 70%;
-font-size: medium
-}
-.input-holder>button{
-    background-color: #050B1450;
-    color: var(--deep-blue)
-}
-/* Prediction Summarry*/
-.prediction-summarry{
-    width:50%;
-    padding: 2%;
-    border-radius: 8px
-}
-.prediction-summarry>ul>li{
-    display: flex;
-    justify-content: space-between;
-    margin: 5%;
-    font-size: medium
-}
-.prediction-summarry>ul>li>span.reward{
-    color: var(--faint-yellow)
-}
-.market-data>.btn{
-    margin: 1.5% 0%;
-}
-.prediction-summarry>button{
-    background-color: #050B1450;
-    font-size: large
-}
-</style>

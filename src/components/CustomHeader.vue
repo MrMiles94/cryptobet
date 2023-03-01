@@ -1,5 +1,5 @@
 <template>
-  <div id="nav" class="flex-row just-space-between align-center">
+  <div id="nav" class="flex-row just-space-between align-center fix">
     <MyLogo/>
     <MenuTabs class="disappear-m"/>
 

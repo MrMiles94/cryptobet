@@ -1,6 +1,6 @@
 <template>
     <div class="prediction-market container flex-col align-center">
-        <ModalOverlay/>
+        <router-view></router-view>
         <div class="my-prediction flex-col align-center">
             <CustomSearch/>
             <MarketFilters/>
@@ -18,7 +18,6 @@
 </template>
 <script>
 import CustomSearch from '../components/CustomSearch.vue'
-import ModalOverlay from '../components/ModalOverlay'
 import MarketFilters from '../components/MarketFilters.vue';
 import BetSlip from '../components/BetsSlip.vue'
 import NoBet from '../components/NoBet.vue'
@@ -30,8 +29,6 @@ export default {
         }
     },
     components:{
-
-        ModalOverlay,
         MarketFilters,
         CustomSearch,
         BetSlip,

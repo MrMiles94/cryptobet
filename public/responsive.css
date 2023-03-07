@@ -130,7 +130,7 @@
         width:55%
     }
    a,p{
-        font-size: medium !important        
+        font-size: medium        
     }
     .home-wallet{
         width:88%
@@ -250,7 +250,9 @@
 
      /* Wallet styling*/
     h1,.wallet-container>h1{
-        font-size: larger !important    
+        font-size: larger !important;
+        width: 100%;
+        text-align: center
     }
     .headline span{
         font-size: medium !important;
@@ -260,6 +262,17 @@
         padding:3% 0px;
         font-size: medium
     }
+
+    /* for how to play */
+    
+    .play-guides>h2{
+        font-size:medium;
+        font-weight: bolder;
+    }
+    .play-guides>span{
+        font-size:x-small
+    }
+
 
     /*card presentations*/
     .card{
@@ -277,6 +290,7 @@
     select#Liquidity{
         width:85px;
     }
+    
    
 }
 @media screen and (max-width:620px){

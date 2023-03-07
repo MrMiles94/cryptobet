@@ -3,9 +3,7 @@
     
         <div class="container btn-container flex-row align-center">
             <router-link to="/" class="btn-back small-circle faint-background  flex-col just-center align-center">
-                <i class="fa fa-arrow-back ">
-                    >=
-                </i>
+                <b class="fa fa-arrow-left"></b>
             </router-link>
             <h4>Home / Learn How To Play</h4>
             

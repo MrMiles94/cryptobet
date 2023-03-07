@@ -1,6 +1,5 @@
 <template>
     <div class="container flex-col align-center just-space-around wallet-container">
-        <ModalOverlay/>
         <h1>Connect Walltet</h1>
         <p>
             To get involved in the prediction market, you have to connect one or more crypro wallets.
@@ -16,13 +15,11 @@
     </div>
 </template>
 <script>
-import AllWallet from '../components/Wallets.vue'
-import ModalOverlay from '../components/ModalOverlay'
+import AllWallet from '../components/Wallets.vue';
 export default {
     name: 'ConnectWallet',
     components:{
-        AllWallet,
-        ModalOverlay
+        AllWallet
     }
 }
 </script>

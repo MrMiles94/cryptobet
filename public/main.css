@@ -247,6 +247,9 @@ backdrop-filter: blur(3px);
 .btn-empty-fill:hover{
     background-color:  var(--deep-blue);
 }
+.btn-back>b{
+    font-size: xx-large;
+}
 .faint-background{
     background-color: var(--faint-blue-gray)
 }
@@ -587,6 +590,7 @@ font-size: medium
 .play-guides{
     text-align: center
 }
+
 .play-guides>hr{
     margin: 3% 0%;
     width: 90%;
@@ -619,5 +623,3 @@ font-size: medium
     height: 50px;
     border-radius: 30%;
 }
-
-

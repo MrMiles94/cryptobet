@@ -1,66 +1,21 @@
 <template>
-    <div class="prediction card">
-        <PredictionCategory category='Sports'/>
+    <div v-for="event in events" :key="event.id"  class="prediction card">
+        <PredictionCategory :category='event.category'/>
         <div class="headline container-fluid flex-row align-center">
         <img src="#" alt="t-p">
-        <span>Man-United wil win 
-            PSG tonight
+        <span>{{ event.title }}
         </span>
         </div>
-        <EventTime :time='predictions.time'/>
+        <EventTime :time='event.time'/>
         <hr>
         <div class=" volume container-fluid flex-row just-space-between">
             <span>Total Volume</span>
-            <span>{{'$'+predictions.totalVolume}}</span>
+            <span>${{event.totalVolume}}</span>
         </div>
-        <EventSummarry :predictionEvent="predictions"/>
+        <EventSummarry :predictionEvent="event"/>
         <router-link 
         class="btn btn-block pale-blue-border predict-now" 
-        to='/predictionmarket/prediction'
-        >
-        Predict Now
-        </router-link>
-    </div>
-    <div class="prediction card">
-        <PredictionCategory category='Sports'/>
-        <div class="headline container-fluid flex-row align-center">
-        <img src="#" alt="t-p">
-        <span>Man-United wil win 
-            PSG tonight
-        </span>
-        </div>
-        <EventTime :time='predictions.time'/>
-        <hr>
-        <div class=" volume container-fluid flex-row just-space-between">
-            <span>Total Volume</span>
-            <span>{{'$'+predictions.totalVolume}}</span>
-        </div>
-        <EventSummarry :predictionEvent="predictions"/>
-        <router-link 
-        class="btn btn-block pale-blue-border predict-now" 
-        to='/predictionmarket/prediction'
-        >
-        Predict Now
-        </router-link>
-    </div>
-    <div class="prediction card">
-        <PredictionCategory category='Sports'/>
-        <div class="headline container-fluid flex-row align-center">
-        <img src="#" alt="t-p">
-        <span>Man-United wil win 
-            PSG tonight
-        </span>
-        </div>
-        <EventTime :time='predictions.time'/>
-        <hr>
-        <div class=" volume container-fluid flex-row just-space-between">
-            <span>Total Volume</span>
-            <span>{{'$'+predictions.totalVolume}}</span>
-        </div>
-        <EventSummarry :predictionEvent="predictions"/>
-        <router-link 
-        class="btn btn-block pale-blue-border predict-now" 
-        to='/predictionmarket/prediction'
+        :to="`/predictionmarket${event.id}`"
         >
         Predict Now
         </router-link>
@@ -75,12 +30,6 @@ import EventSummarry from './EventSummarry'
         data() {
             return {
                 predictions:{
-                    time:{
-                        timeStart: 200,
-                        timeEnd:400,
-                        timeLeft: new Date().getSeconds(),
-                        timeCount:((400-200-80)/(400-200))*100
-                    },
                     type:'Yes / No',
                     totalVolume:5000,
                     stake:{
@@ -95,6 +44,11 @@ import EventSummarry from './EventSummarry'
                     networkFee:Number,
                     sharesBought:Number
                 }
+            }
+        },
+        computed:{
+            events(){
+                return this.$store.state.events
             }
         },
         components:{

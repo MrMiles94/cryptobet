@@ -12,7 +12,7 @@
       <router-link class=" btn btn-blue-fill" to="predictionmarket">
       Explore Markets
       </router-link>
-      <router-link class=" btn btn-empty-fill blue-border" to="how_to_play">
+      <router-link class=" btn btn-empty-fill blue-border" to="how_to_play/videos">
         Learn how to play
       </router-link>
     </div>

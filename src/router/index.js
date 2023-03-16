@@ -13,7 +13,7 @@ const routes = [
         component: import(/*webpackChunkName:"Home" */ '../views/MainHomeView.vue'),
       },
       {
-        path:'/how_to_play',
+        path:'/how_to_play/:page',
         name:'how_to_play',
         component:() => import(/*webpackChunkName: "HowToPlay"*/ '../views/HowToPlay.vue')
       }
@@ -52,6 +52,11 @@ const routes = [
     children:[
       {
         path:'/slip',
+        name: 'betslip',
+        component: import(/*webpackChunckName: BetSlip */ '../components/ModalOverlay.vue')
+      },
+      {
+        path:'/predictionmarket:id',
         name: 'betslip',
         component: import(/*webpackChunckName: BetSlip */ '../components/ModalOverlay.vue')
       }

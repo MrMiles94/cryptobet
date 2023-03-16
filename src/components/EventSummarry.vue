@@ -2,7 +2,7 @@
     <div class="even-summarry">
         <div class=" prediction-type container-fluid  flex-row just-space-between">
             <span>Prediction Type</span>
-            <span>{{predictionEvent.type}}</span>
+            <span>{{predictionEvent.predictionType}}</span>
         </div>
     </div>
 </template>
@@ -10,7 +10,7 @@
 export default{
     name:'EventSummarry',
     props:{
-        predictionEvent: Object
+        predictionEvent:Object
     }
 }
 </script>

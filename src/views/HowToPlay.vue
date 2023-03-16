@@ -13,19 +13,19 @@
         <hr>
         <div class="container">
             <div class="art-n-video">
-                <router-link class="btn clear-fill" to='/articles'>Articles</router-link>
-                <router-link class="btn clear-fill"  to='/videos'>Videos</router-link>
+                <router-link @click="videosLink" class="btn clear-fill" to='/how_to_play/articles'>Articles</router-link>
+                <router-link @click="videosLink" class="btn clear-fill"  to='/how_to_play/videos'>Videos</router-link>
             </div>
             <div class="container-fluid flex-row wrap">
-                <div class="card how-to-videos deemed-black">
+                <div v-for="video in videos" :key="video.id" class="card how-to-videos deemed-black">
                     <div class="video flex-col align-center just-center">
-                        <div class="play-btn blue-border btn flex-col align-center just-center">
+                        <div class="play-btn blue-border btn flex-col align-center just-center circle">
                             <span class="fa fa-play"></span>
                         </div>
                         
                     </div>
                     <div class="container text">
-                        <span>title goes here in the end and kinda bla blab bla bulshit. gmddmfpmapof empeq evmq qerq voeqorrv qoemrvk qerokv  qerv qer </span>
+                        <span>{{video.title}} </span>
                     </div>
                     <div class="time-n-rating container flex-row just-space-between">
                         <span>time</span>
@@ -45,3 +45,14 @@
         
     </div>
 </template>
+<script>
+export default{
+    name:"HowToPlay",
+    computed:{
+        videos(){
+            const page = this.$route.params.page
+            return this.$store.state.tutorials[page]
+        }
+    }
+}
+</script>

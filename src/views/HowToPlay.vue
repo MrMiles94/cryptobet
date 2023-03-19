@@ -1,20 +1,13 @@
 <template>
     <div class="container play-guides flex-col align-center">
-    
-        <div class="container btn-container flex-row align-center">
-            <router-link to="/" class="btn-back small-circle faint-background  flex-col just-center align-center">
-                <b class="fa fa-arrow-left"></b>
-            </router-link>
-            <h4>Home / Learn How To Play</h4>
-            
-        </div>
+        <BackButton dirTo="Home" dirFrom="Learn How To Play" link="/"/>
         <h2>How to play in the market with well detailed guides</h2>
         <span>We Understand that a times predictions market can be hard to Understand. Learn how to participate with your prefered method of learning. Articles or Videos?</span>
         <hr>
         <div class="container">
             <div class="art-n-video">
-                <router-link @click="videosLink" class="btn clear-fill" to='/how_to_play/articles'>Articles</router-link>
-                <router-link @click="videosLink" class="btn clear-fill"  to='/how_to_play/videos'>Videos</router-link>
+                <router-link class="btn clear-fill" to='/how_to_play/articles'>Articles</router-link>
+                <router-link class="btn clear-fill"  to='/how_to_play/videos'>Videos</router-link>
             </div>
             <div class="container-fluid flex-row wrap">
                 <div v-for="video in videos" :key="video.id" class="card how-to-videos deemed-black">
@@ -46,8 +39,12 @@
     </div>
 </template>
 <script>
+import BackButton from '../components/BackButton.vue';
 export default{
     name:"HowToPlay",
+    components:{
+        BackButton
+    },
     computed:{
         videos(){
             const page = this.$route.params.page

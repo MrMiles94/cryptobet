@@ -1,4 +1,4 @@
-import { createStore } from 'vuex'
+import { createStore } from 'vuex';
 
 export default createStore({
   state: {
@@ -49,19 +49,21 @@ export default createStore({
         id:1,
         category:'sports',
         title:'Man-United will win PSG tonight',
-        time:new Date(2019, 3, 24, 10, 33, 30),
+        time:Date.parse("2019-3-24 10:33:30"),
         totalVolume:50000,
         predictionType: "binary",
         choice:''
-      },{
+      },
+      {
         id:2,
         category:'natural Event',
         title:'It will rain tomorrow',
-        time: new Date(2019, 3, 24, 10, 33, 30),
+        time:Date.parse(2019, 3, 24, 10, 33, 30),
         totalVolume:90000,
         predictionType: "binary",
         choice:''
-      },{
+      },
+      {
         id:3,
         category:'Stock',
         title:'Facebook downsizing ticks',
@@ -80,4 +82,4 @@ export default createStore({
   },
   modules: {
   }
-})
+});

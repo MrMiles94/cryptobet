@@ -1,9 +1,9 @@
 <template>
     <div class=" time container-fluid flex-row just-space-between wrap">
             <span>Time left</span>
-            <span>{{time-Date()}} Hrs</span>
+            <span>{{"Time here"}} Hrs</span>
             <div class="time-line">
-                <div :style="{width: time.timeCount+'%'}"></div>
+                <div :style="{width: 25+'%'}"></div>
             </div>
         </div>
 </template>

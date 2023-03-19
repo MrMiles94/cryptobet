@@ -1,5 +1,6 @@
 <template>
-<div class="prediction-market container flex-col align-center"><router-view></router-view>
+<div class="prediction-market container flex-col align-center">
+    <router-view></router-view>
     <h1>Explore, and enter any active market of your choice.</h1>
     <hr>
     <div class="search-area flex-row just-space-between">

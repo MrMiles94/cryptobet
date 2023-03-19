@@ -51,7 +51,7 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/PredictionMarket.vue'),
     children:[
       {
-        path:'/slip',
+        path:'/betslip:id',
         name: 'betslip',
         component: import(/*webpackChunckName: BetSlip */ '../components/ModalOverlay.vue')
       },
@@ -71,8 +71,8 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/ConnectWallet.vue')
   },
   {
-    path: '/betslip',
-    name: 'betslip',
+    path: '/betview:id',
+    name: 'betview',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.

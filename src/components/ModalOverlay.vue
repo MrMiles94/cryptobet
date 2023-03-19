@@ -39,8 +39,8 @@
                 <button @click="toggleSummarry">Summarry</button>
                 <PredictionSummarry v-if="showSummarry"/>
             </div>
-            <button class="btn btn-blue-fill">Stake</button>
-            <button class="btn btn-danger">Cancel</button>
+            <router-link to="mypredictions" class="btn btn-blue-fill">Stake</router-link>
+            <router-link :to="`/betview${this.$route.params.id}`" class="btn btn-danger">Cancel</router-link>
         </div>
     </div>
 </template>

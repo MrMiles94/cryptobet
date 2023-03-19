@@ -15,7 +15,7 @@
         <EventSummarry :predictionEvent="event"/>
         <router-link 
         class="btn btn-block pale-blue-border predict-now" 
-        :to="`/predictionmarket${event.id}`"
+        :to="`/betview:${event.id}`"
         >
         Predict Now
         </router-link>

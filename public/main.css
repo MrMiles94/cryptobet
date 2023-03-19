@@ -21,6 +21,8 @@
 *{
     transition-duration: 300ms
 }
+
+/* defaults*/
 button,input{
     border: 0px;
     outline: none
@@ -52,6 +54,22 @@ p,h1,h2,h3,h4,input,select,option,span,label,button,ul,li{
     color:var(--text-white)
 }
 
+/*Reusables*/
+.container{
+    width: 96%;
+    height: auto;
+    padding: 2% 2%;
+}
+.container-fluid{
+    width: 100%;
+    padding: .5%;
+    margin-top: 2%;
+}
+.flat-box{
+    width: 96%;
+    height: auto;
+    padding:0% 2%
+}
 .flex-row{
     display: flex;
 }
@@ -88,6 +106,7 @@ p,h1,h2,h3,h4,input,select,option,span,label,button,ul,li{
     padding:15px 20px;
     background-color: #080F19;
     font-size: larger;
+    height: auto !important;
 }
 .circle{
     border-radius: 50%;
@@ -97,6 +116,7 @@ p,h1,h2,h3,h4,input,select,option,span,label,button,ul,li{
     height: 50px;
     border-radius: 50%
 }
+
 /* colors*/
 .clear-fill{
     background-color: #00000000 !important;
@@ -114,6 +134,7 @@ p,h1,h2,h3,h4,input,select,option,span,label,button,ul,li{
 .pale-blue-border{
     border: 1px solid var(--pale-blue)
 }
+
 /* Navigation bar*/
 div#nav{
     background-color:var(--blackish-blue);
@@ -153,21 +174,7 @@ div#nav a.router-link-exact-active {
     width: 100%;
     height: 100%;
 }
-.container{
-    width: 96%;
-    height: auto;
-    padding: 2% 2%;
-}
-.container-fluid{
-    width: 100%;
-    padding: .5%;
-    margin-top: 2%;
-}
-.flat-box{
-    width: 96%;
-    height: auto;
-    padding:0% 2%
-}
+
 /*menu tab stylings*/
 .menu-tabs{
     width: 45%;

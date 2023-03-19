@@ -35,10 +35,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container content">
-                       
-                    </div>
                 </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="container no-height flex-row just-space-between">
+                <h2>Select a prediction for this event</h2>
+                <router-link class="btn btn-blue-fill" :to="`/betslip${this.$route.params.id}`" >View market data</router-link>
+            </div>
+            <div class="flat-box flex-row wrap">
+                <SinglePrediction/>
             </div>
         </div>
     </div>
@@ -47,6 +54,7 @@
 import BackButton from '../components/BackButton.vue';
 import PredictionCategory from '../components/PredictionCategory.vue';
 import EventTime from '../components/EventTime.vue';
+import SinglePrediction from '../components/Prediction.vue';
 export default {
     name:'BetView',
     data(){
@@ -74,7 +82,8 @@ export default {
     components:{
         BackButton,
         PredictionCategory,
-        EventTime
+        EventTime,
+        SinglePrediction
     }
 }
 </script>
@@ -112,6 +121,10 @@ export default {
     border-radius: 10px;
     padding: 1%;
     background-color: var(--faint-blue-gray);
+}
+.no-height>h2{
+height: 0px;
+padding: 0px;
 }
 .footings{
     width: 100%;
